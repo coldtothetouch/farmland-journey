@@ -98,7 +98,8 @@ const SLIDES_CONFIG = [
         modifierClass: 'btn--inset'
       }
     ],
-    achiev: null
+    achiev: null,
+    isDisclaimer: true,
   },
   //  id: 'swamp-4',
   {
@@ -457,10 +458,10 @@ const SLIDES_CONFIG = [
     id: 'end1-1',
     text: 'Светлячки слишком высоко — Танти включает фонарь и направляет луч на поляну. Приняв свет за сородича, светлячки спускаются к лисёнку, образуя мерцающий купол.',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/final/2/tech.mp4`,
-    imageMob: `${URL_TO_ASSETS_MOB}/final/2/tech.mp4`,
-    video: null,
-    videoMob: null,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/final/2/tech.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/final/2/tech.mp4`,
     buttons: [
       {
         text: '',
@@ -480,10 +481,10 @@ const SLIDES_CONFIG = [
     id: 'end2-1',
     text: 'Танти выходит на поляну не один — за ним увязались его новые друзья. Светлячки совершенно не боятся их, принимая Танти за «своего», и кружатся прямо вокруг уютной компании.',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/final/2/social.mp4`,
-    imageMob: `${URL_TO_ASSETS_MOB}/final/2/social.mp4`,
-    video: null,
-    videoMob: null,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/final/2/social.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/final/2/social.mp4`,
     buttons: [
       {
         text: '',
@@ -502,10 +503,10 @@ const SLIDES_CONFIG = [
     id: 'end3-1',
     text: 'У кромки леса Танти находит скрытую тропу на секретный холм. Оттуда открывается лучший, недоступный обычным туристам вид на бескрайнее море светящихся огней.',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/final/2/surv.mp4`,
-    imageMob: `${URL_TO_ASSETS_MOB}/final/2/surv.mp4`,
-    video: null,
-    videoMob: null,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/final/2/surv.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/final/2/surv.mp4`,
     buttons: [
       {
         text: '',
@@ -524,10 +525,10 @@ const SLIDES_CONFIG = [
     id: 'end4-1',
     text: 'Танти наслаждается мерцанием и находит свой идеальный баланс: пьет чай из собранных трав, угощает бурундука печеньем и делает красивое селфи на фоне светлячков. Абсолютная гармония!',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/final/3.mp4`,
-    imageMob: `${URL_TO_ASSETS_MOB}/final/3.mp4`,
-    video: null,
-    videoMob: null,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/final/2/balance.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/final/2/balance.mp4`,
     buttons: [
       {
         text: '',
@@ -546,10 +547,10 @@ const SLIDES_CONFIG = [
     id: 'end5-1',
     text: 'Танти хочет сделать фото. Вдруг ворона садится прямо на край селфи-палки, и светлячки начинают мигать в едином ритме с крыльями. Крупный светлячок доверчиво садится Танти на нос. ',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/final/4.mp4`,
-    imageMob: `${URL_TO_ASSETS_MOB}/final/4.mp4`,
-    video: null,
-    videoMob: null,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/final/2/secret.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/final/2/secret.mp4`,
     buttons: [
       {
         text: '',
@@ -568,8 +569,8 @@ const SLIDES_CONFIG = [
     id: 'restart',
     text: 'Сыграй еще раз другим стилем, чтобы открыть остальные концовки ',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/final/5.webp`,
-    imageMob: `${URL_TO_ASSETS_MOB}/final/5.webp`,
+    image: `${URL_TO_ASSETS}/final/3.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/final/3.webp`,
     video: null,
     videoMob: null,
     buttons: [
