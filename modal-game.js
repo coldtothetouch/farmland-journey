@@ -31,7 +31,7 @@ const SLIDES_CONFIG = [
   //   id: 'swamp-1',
   {
     id: 'start',
-    text: 'Лисенок Танти отправляется на поиски редкого чуда. Впереди сложный путь — каждый твой выбор влияет на исход истории',
+    text: 'Лисенок Танти отправляется на поиски редкого чуда. Впереди сложный путь — каждый твой выбор влияет на исход истории.',
     textCenter: true,
     image: `${URL_TO_ASSETS}/start/1.webp`,
     imageMob: `${URL_TO_ASSETS_MOB}/start/1.webp`,
@@ -51,7 +51,7 @@ const SLIDES_CONFIG = [
   //   id: 'swamp-1',
   {
     id: RESTART_ID,
-    text: 'Вечером с крыльца Танти замечает за горами зеленое мерцание',
+    text: 'Вечером с крыльца Танти замечает за горами зеленое мерцание.',
     textCenter: false,
     image: `${URL_TO_ASSETS}/start/2.webp`,
     imageMob: `${URL_TO_ASSETS_MOB}/start/2.webp`,
@@ -69,7 +69,7 @@ const SLIDES_CONFIG = [
   //  id: 'swamp-2',
   {
     id: 'swamp-2',
-    text: 'Это редкое чудо бывает пару раз в году, и видно его лишь из скрытой долины',
+    text: 'Это редкое чудо бывает пару раз в году, и видно его лишь из скрытой долины.',
     textCenter: false,
     image: `${URL_TO_ASSETS}/start/3.webp`,
     imageMob: `${URL_TO_ASSETS_MOB}/start/3.webp`,
@@ -87,7 +87,7 @@ const SLIDES_CONFIG = [
   // id: 'swamp-3',
   {
     id: 'swamp-3',
-    text: 'Вооружившись туристическим рюкзаком, Танти решает своими глазами увидеть это чудо и отправляется в путь',
+    text: 'Вооружившись туристическим рюкзаком, Танти решает своими глазами увидеть это чудо и отправляется в путь.',
     textCenter: false,
     image: `${URL_TO_ASSETS}/start/4.webp`,
     imageMob: `${URL_TO_ASSETS_MOB}/start/4.webp`,
@@ -198,7 +198,7 @@ const SLIDES_CONFIG = [
   // id: 'swamp-choice-3-res',
   {
     id: 'swamp-choice-3-res',
-    text: 'Через спутниковую карту, Танти намечает маршрут по отмелям и каждый свой шаг прощупывает трекинговой палкой',
+    text: 'Через спутниковую карту, Танти намечает маршрут по отмелям и каждый свой шаг прощупывает трекинговой палкой.',
     textCenter: false,
     image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
     imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
@@ -221,7 +221,7 @@ const SLIDES_CONFIG = [
   // id: 'steppe-choices',
   {
     id: 'steppe-choices',
-    text: 'Теперь — бескрайняя степь с высокой травой. Тропа совершенно затерялась нужно сориентироваться',
+    text: 'Теперь — бескрайняя степь с высокой травой. Тропа совершенно затерялась нужно сориентироваться.',
     textCenter: true,
     image: `${URL_TO_ASSETS}/steppe/bg.webp`,
     imageMob: `${URL_TO_ASSETS_MOB}/steppe/bg.webp`,
@@ -340,7 +340,7 @@ const SLIDES_CONFIG = [
   // id: 'pass-choices',
   {
     id: 'pass-choices',
-    text: 'Цель уже близко, но солнце клонится к закату. Впереди крутой участок с опасной осыпью',
+    text: 'Цель уже близко, но солнце клонится к закату. Впереди крутой участок с опасной осыпью.',
     textCenter: true,
     image: `${URL_TO_ASSETS}/mountains/bg.webp`,
     imageMob: `${URL_TO_ASSETS_MOB}/mountains/bg.webp`,
@@ -547,7 +547,7 @@ const SLIDES_CONFIG = [
   // id: 'end5-1',
   {
     id: 'end5-1',
-    text: 'Танти хочет сделать фото. Вдруг ворона садится прямо на край селфи-палки, и светлячки начинают мигать в едином ритме с крыльями. Крупный светлячок доверчиво садится Танти на нос. ',
+    text: 'Танти хочет сделать фото. Вдруг ворона садится прямо на край селфи-палки, и светлячки начинают мигать в едином ритме с крыльями. Крупный светлячок доверчиво садится Танти на нос.',
     textCenter: true,
     image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
     imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
@@ -569,7 +569,7 @@ const SLIDES_CONFIG = [
   // id: 'restart',
   {
     id: 'restart',
-    text: 'Сыграй еще раз другим стилем, чтобы открыть остальные концовки ',
+    text: 'Сыграй еще раз другим стилем, чтобы открыть остальные концовки.',
     textCenter: true,
     image: `${URL_TO_ASSETS}/final/3.webp`,
     imageMob: `${URL_TO_ASSETS_MOB}/final/3.webp`,
@@ -625,7 +625,7 @@ const BACKPACK_CONFIG = {
   add: 'Реклама',
   picture: `${URL_TO_ASSETS_COMMON}/backpackMain.webp`,
   title: 'Ваш рюкзак',
-  desc: ' Здесь находятся предметы, которые могут помочь Танти в своем путешествии',
+  desc: ' Здесь находятся предметы, которые могут помочь Танти в своем путешествии.',
   btnText: 'Продолжить путешествие'
 };
 
