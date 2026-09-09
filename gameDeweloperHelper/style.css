@@ -465,6 +465,38 @@
     aspect-ratio: 325/50;
   }
 }
+.modal-game__container .slide__banner {
+  position: absolute;
+  top: calc(50 * 100vw / var(--wiepotrDeviseWith));
+  left: calc(85 * 100vw / var(--wiepotrDeviseWith));
+  z-index: 3;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+.modal-game__container .slide__banner img {
+  display: block;
+  width: calc(580 * 100vw / var(--wiepotrDeviseWith));
+  height: calc(200 * 100vw / var(--wiepotrDeviseWith));
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 48em) {
+  .modal-game__container .slide__banner {
+    top: calc(30 * 100vw / var(--wiepotrDeviseWith));
+    left: calc(16 * 100vw / var(--wiepotrDeviseWith));
+  }
+  .modal-game__container .slide__banner img {
+    width: calc(145 * 100vw / var(--wiepotrDeviseWith));
+    height: calc(50 * 100vw / var(--wiepotrDeviseWith));
+  }
+}
+.modal-game__container .backpack-badge.game-ui--hidden,
+.modal-game__container .achiev-counter.game-ui--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 .modal-game__container .achiev-counter {
   position: absolute;
   top: calc(40 * 100vw / var(--wiepotrDeviseWith));

@@ -476,6 +476,40 @@
         aspect-ratio: 325/50;
       }
     }
+
+    &__banner {
+      position: absolute;
+      top: pxToRemMix(50);
+      left: pxToRemMix(85);
+      z-index: 3;
+      display: block;
+      cursor: pointer;
+      text-decoration: none;
+
+      img {
+        display: block;
+        width: pxToRemMix(580);
+        height: pxToRemMix(200);
+        object-fit: contain;
+      }
+
+      @include small-tablet {
+        top: pxToRemMix(30);
+        left: pxToRemMix(16);
+
+        img {
+          width: pxToRemMix(145);
+          height: pxToRemMix(50);
+        }
+      }
+    }
+  }
+
+  .backpack-badge.game-ui--hidden,
+  .achiev-counter.game-ui--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .achiev-counter {
