@@ -1,5 +1,7 @@
 //ссылка на папку в облаке
-const URL_TO_ASSETS = 'https://storage.yandexcloud.net/gamefarmland/assets';
+const URL_TO_ASSETS = 'https://storage.yandexcloud.net/external-assets/tantum/farmland-journey/desktop';
+const URL_TO_ASSETS_MOB = 'https://storage.yandexcloud.net/external-assets/tantum/farmland-journey/mobile';
+const URL_TO_ASSETS_COMMON = 'https://storage.yandexcloud.net/external-assets/tantum/farmland-journey/common'
 //откуда начинаем игру
 const RESTART_ID = 'swamp-1';
 //
@@ -30,8 +32,8 @@ const SLIDES_CONFIG = [
     id: 'start',
     text: 'Лисенок Танти отправляется на поиски редкого чуда. Впереди сложный путь — каждый твой выбор влияет на исход истории',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-2.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-2--mob.webp`,
+    image: `${URL_TO_ASSETS}/start/1.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/start/1.webp`,
     video: null,
     videoMob: null,
     buttons: [
@@ -49,8 +51,8 @@ const SLIDES_CONFIG = [
     id: RESTART_ID,
     text: 'Вечером с крыльца Танти замечает за горами зеленое мерцание',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-1.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-1--mob.webp`,
+    image: `${URL_TO_ASSETS}/start/2.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/start/2.webp`,
     video: null,
     videoMob: null,
     buttons: [
@@ -67,8 +69,8 @@ const SLIDES_CONFIG = [
     id: 'swamp-2',
     text: 'Это редкое чудо бывает пару раз в году, и видно его лишь из скрытой долины',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-2.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-2--mob.webp`,
+    image: `${URL_TO_ASSETS}/start/3.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/start/3.webp`,
     video: null,
     videoMob: null,
     buttons: [
@@ -85,8 +87,8 @@ const SLIDES_CONFIG = [
     id: 'swamp-3',
     text: 'Вооружившись туристическим рюкзаком, Танти решает своими глазами увидеть это чудо и отправляется в путь',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-3.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-3--mob.webp`,
+    image: `${URL_TO_ASSETS}/start/4.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/start/4.webp`,
     video: null,
     videoMob: null,
     buttons: [
@@ -103,8 +105,8 @@ const SLIDES_CONFIG = [
     id: 'swamp-4',
     text: 'Добраться до долины нужно к вечеру!',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-3.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-4--mob.webp`,
+    image: `${URL_TO_ASSETS}/start/5.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/start/5.webp`,
     video: null,
     videoMob: null,
     buttons: [
@@ -121,33 +123,32 @@ const SLIDES_CONFIG = [
     id: 'swamp-choices',
     text: 'Впереди болото. Идти опасно. Что делать?',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-choices.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-choices--mob.webp`,
+    image: `${URL_TO_ASSETS}/swamp/bg.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/bg.webp`,
     video: null,
     isChoices: true,
     videoMob: null,
-    isChoices: true,
     buttons: [
       {
         text: 'Осмотреть<br>растительность',
         nextId: 'swamp-choice-1-res',
         modifierClass: 'btn--img',
-        btnImgDesc: `${URL_TO_ASSETS}/img/swamp-choices.webp`,
-        btnImgMob: `${URL_TO_ASSETS}/img/swamp-choices--mob.webp`
+        btnImgDesc: `${URL_TO_ASSETS}/swamp/examine.webp`,
+        btnImgMob: `${URL_TO_ASSETS_MOB}/swamp/examine.webp`
       },
       {
         text: 'Поделиться угощением<br>с птицей',
         nextId: 'swamp-choice-2-res',
         modifierClass: 'btn--img',
-        btnImgDesc: `${URL_TO_ASSETS}/img/swamp-choices.webp`,
-        btnImgMob: `${URL_TO_ASSETS}/img/swamp-choices--mob.webp`
+        btnImgDesc: `${URL_TO_ASSETS}/swamp/share.webp`,
+        btnImgMob: `${URL_TO_ASSETS_MOB}/swamp/share.webp`
       },
       {
         text: 'Использовать треккинговую палку и навигацию',
         nextId: 'swamp-choice-3-res',
         modifierClass: 'btn--img',
-        btnImgDesc: `${URL_TO_ASSETS}/img/swamp-choices.webp`,
-        btnImgMob: `${URL_TO_ASSETS}/img/swamp-choices--mob.webp`
+        btnImgDesc: `${URL_TO_ASSETS}/swamp/phone.webp`,
+        btnImgMob: `${URL_TO_ASSETS_MOB}/swamp/phone.webp`
       }
     ],
     achiev: null
@@ -158,10 +159,10 @@ const SLIDES_CONFIG = [
     id: 'swamp-choice-1-res',
     text: 'Танти кидает печенье вороне. Там, где спокойно садится крупная птица, — земля точно выдержит. Танти осторожно идет за ней.',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-choice-1-res.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.webp`,
-    video: `${URL_TO_ASSETS}/img/swamp-choice-1-res.mp4`,
-    videoMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.mp4`,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/swamp/share.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/swamp/share.mp4`,
     buttons: [
       {
         text: '',
@@ -177,10 +178,10 @@ const SLIDES_CONFIG = [
     id: 'swamp-choice-2-res',
     text: 'Танти замечает островки с осокой и сосной. Это верный признак твердой почвы. По ним он уверенно переходит топь.',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-choice-1-res.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.webp`,
-    video: `${URL_TO_ASSETS}/img/swamp-choice-1-res.mp4`,
-    videoMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.mp4`,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/swamp/examine.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/swamp/examine.mp4`,
     buttons: [
       {
         text: '',
@@ -196,10 +197,10 @@ const SLIDES_CONFIG = [
     id: 'swamp-choice-3-res',
     text: 'Через спутниковую карту, Танти намечает маршрут по отмелям и каждый свой шаг прощупывает трекинговой палкой',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-choice-1-res.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.webp`,
-    video: `${URL_TO_ASSETS}/img/swamp-choice-1-res.mp4`,
-    videoMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.mp4`,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/swamp/phone.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/swamp/phone.mp4`,
     buttons: [
       {
         text: '',
@@ -219,8 +220,8 @@ const SLIDES_CONFIG = [
     id: 'steppe-choices',
     text: 'Теперь — бескрайняя степь с высокой травой. Тропа совершенно затерялась нужно сориентироваться',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-2.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-2--mob.webp`,
+    image: `${URL_TO_ASSETS}/steppe/bg.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/steppe/bg.webp`,
     video: null,
     videoMob: null,
     isChoices: true,
@@ -229,22 +230,22 @@ const SLIDES_CONFIG = [
         text: 'Сыграть на губной <br> гармошке',
         nextId: 'steppe-choice-3-res',
         modifierClass: 'btn--img',
-        btnImgDesc: `${URL_TO_ASSETS}/img/swamp-choices.webp`,
-        btnImgMob: `${URL_TO_ASSETS}/img/swamp-choices--mob.webp`
+        btnImgDesc: `${URL_TO_ASSETS}/steppe/harmonica.webp`,
+        btnImgMob: `${URL_TO_ASSETS_MOB}/steppe/harmonica.webp`
       },
       {
         text: 'Найти степной <br>  муравейник',
         nextId: 'steppe-choice-2-res',
         modifierClass: 'btn--img',
-        btnImgDesc: `${URL_TO_ASSETS}/img/swamp-choices.webp`,
-        btnImgMob: `${URL_TO_ASSETS}/img/swamp-choices--mob.webp`
+        btnImgDesc: `${URL_TO_ASSETS}/steppe/anthill.webp`,
+        btnImgMob: `${URL_TO_ASSETS_MOB}/steppe/anthill.webp`
       },
       {
         text: 'Использовать селфи-палку',
         nextId: 'steppe-choice-1-res',
         modifierClass: 'btn--img',
-        btnImgDesc: `${URL_TO_ASSETS}/img/swamp-choices.webp`,
-        btnImgMob: `${URL_TO_ASSETS}/img/swamp-choices--mob.webp`
+        btnImgDesc: `${URL_TO_ASSETS}/steppe/selfie.webp`,
+        btnImgMob: `${URL_TO_ASSETS_MOB}/steppe/selfie.webp`
       }
     ],
     achiev: null
@@ -278,10 +279,10 @@ const SLIDES_CONFIG = [
     id: 'steppe-choice-1-res',
     text: 'Подняв смартфон над травой, Танти делает пару снимков. Селфи-палка отлично помогает увидеть примятую тропу. Маршрут найден!',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-choice-1-res.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.webp`,
-    video: `${URL_TO_ASSETS}/img/swamp-choice-1-res.mp4`,
-    videoMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.mp4`,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/steppe/selfie.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/steppe/selfie.mp4`,
     buttons: [
       {
         text: '',
@@ -297,10 +298,10 @@ const SLIDES_CONFIG = [
     id: 'steppe-choice-2-res',
     text: 'Танти находит муравейник. Его южная сторона всегда более пологая. Определив стороны света, Танти выходит в нужном направлении.',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-choice-1-res.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.webp`,
-    video: `${URL_TO_ASSETS}/img/swamp-choice-1-res.mp4`,
-    videoMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.mp4`,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/steppe/anthill.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/steppe/anthill.mp4`,
     buttons: [
       {
         text: '',
@@ -316,10 +317,10 @@ const SLIDES_CONFIG = [
     id: 'steppe-choice-3-res',
     text: 'Звонкая мелодия разносится по степи. На звук выходит пастушья собака и радостно выводит музыканта к натоптанной дороге.',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-choice-1-res.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.webp`,
-    video: `${URL_TO_ASSETS}/img/swamp-choice-1-res.mp4`,
-    videoMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.mp4`,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/steppe/harmonica.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/steppe/harmonica.mp4`,
     buttons: [
       {
         text: '',
@@ -338,8 +339,8 @@ const SLIDES_CONFIG = [
     id: 'pass-choices',
     text: 'Цель уже близко, но солнце клонится к закату. Впереди крутой участок с опасной осыпью',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-2.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-2--mob.webp`,
+    image: `${URL_TO_ASSETS}/mountains/bg.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/mountains/bg.webp`,
     video: null,
     isChoices: true,
     videoMob: null,
@@ -348,22 +349,22 @@ const SLIDES_CONFIG = [
         text: 'Довериться местным <br/> обитателям',
         nextId: 'pass-choice-1-res',
         modifierClass: 'btn--img',
-        btnImgDesc: `${URL_TO_ASSETS}/img/swamp-choices.webp`,
-        btnImgMob: `${URL_TO_ASSETS}/img/swamp-choices--mob.webp`
+        btnImgDesc: `${URL_TO_ASSETS}/mountains/locals.webp`,
+        btnImgMob: `${URL_TO_ASSETS_MOB}/mountains/locals.webp`
       },
       {
         text: 'Использовать оптику <br/> смартфона',
         nextId: 'pass-choice-2-res',
         modifierClass: 'btn--img',
-        btnImgDesc: `${URL_TO_ASSETS}/img/swamp-choices.webp`,
-        btnImgMob: `${URL_TO_ASSETS}/img/swamp-choices--mob.webp`
+        btnImgDesc: `${URL_TO_ASSETS}/mountains/phone.webp`,
+        btnImgMob: `${URL_TO_ASSETS_MOB}/mountains/phone.webp`
       },
       {
         text: 'Внимательно изучить камни',
         nextId: 'pass-choice-3-res',
         modifierClass: 'btn--img',
-        btnImgDesc: `${URL_TO_ASSETS}/img/swamp-choices.webp`,
-        btnImgMob: `${URL_TO_ASSETS}/img/swamp-choices--mob.webp`
+        btnImgDesc: `${URL_TO_ASSETS}/mountains/rocks.webp`,
+        btnImgMob: `${URL_TO_ASSETS_MOB}/mountains/rocks.webp`
       }
     ],
     achiev: null
@@ -374,10 +375,10 @@ const SLIDES_CONFIG = [
     id: 'pass-choice-1-res',
     text: 'Танти замечает горного козлика. Животные инстинктивно знают прочные камни. Танти безопасно спускается, ступая след в след.',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-choice-1-res.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.webp`,
-    video: `${URL_TO_ASSETS}/img/swamp-choice-1-res.mp4`,
-    videoMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.mp4`,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/mountains/locals.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/mountains/locals.mp4`,
     buttons: [
       {
         text: '',
@@ -393,10 +394,10 @@ const SLIDES_CONFIG = [
     id: 'pass-choice-2-res',
     text: 'Через камеру смартфона Танти внимательно изучает склон, находит безопасную полосу монолитной породы и спускается по ней.',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-choice-1-res.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.webp`,
-    video: `${URL_TO_ASSETS}/img/swamp-choice-1-res.mp4`,
-    videoMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.mp4`,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/mountains/phone.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/mountains/phone.mp4`,
     buttons: [
       {
         text: '',
@@ -412,10 +413,10 @@ const SLIDES_CONFIG = [
     id: 'pass-choice-3-res',
     text: 'На неподвижных валунах всегда успевает вырасти лишайник. Танти ступает только по замшелым камням, избегая свежей осыпи.',
     textCenter: false,
-    image: `${URL_TO_ASSETS}/img/swamp-choice-1-res.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.webp`,
-    video: `${URL_TO_ASSETS}/img/swamp-choice-1-res.mp4`,
-    videoMob: `${URL_TO_ASSETS}/img/swamp-choice-1-res--mob.mp4`,
+    image: `${URL_TO_ASSETS}/swamp/swamp.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/swamp/swamp.webp`,
+    video: `${URL_TO_ASSETS}/mountains/rocks.mp4`,
+    videoMob: `${URL_TO_ASSETS_MOB}/mountains/rocks.mp4`,
     buttons: [
       {
         text: '',
@@ -434,8 +435,8 @@ const SLIDES_CONFIG = [
     id: 'calc',
     text: 'Позади остались болота, степи и крутые горы. Танти добрался до заветной долины! Твои решения в пути определили, как пройдет этот финал!',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/calc.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/calc--mob.webp`,
+    image: `${URL_TO_ASSETS}/final/1.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/final/1.webp`,
     video: null,
     videoMob: null,
     buttons: [
@@ -456,8 +457,8 @@ const SLIDES_CONFIG = [
     id: 'end1-1',
     text: 'Светлячки слишком высоко — Танти включает фонарь и направляет луч на поляну. Приняв свет за сородича, светлячки спускаются к лисёнку, образуя мерцающий купол.',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-1.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-1--mob.webp`,
+    image: `${URL_TO_ASSETS}/final/2/tech.mp4`,
+    imageMob: `${URL_TO_ASSETS_MOB}/final/2/tech.mp4`,
     video: null,
     videoMob: null,
     buttons: [
@@ -479,8 +480,8 @@ const SLIDES_CONFIG = [
     id: 'end2-1',
     text: 'Танти выходит на поляну не один — за ним увязались его новые друзья. Светлячки совершенно не боятся их, принимая Танти за «своего», и кружатся прямо вокруг уютной компании.',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-2.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-2--mob.webp`,
+    image: `${URL_TO_ASSETS}/final/2/social.mp4`,
+    imageMob: `${URL_TO_ASSETS_MOB}/final/2/social.mp4`,
     video: null,
     videoMob: null,
     buttons: [
@@ -501,8 +502,8 @@ const SLIDES_CONFIG = [
     id: 'end3-1',
     text: 'У кромки леса Танти находит скрытую тропу на секретный холм. Оттуда открывается лучший, недоступный обычным туристам вид на бескрайнее море светящихся огней.',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-3.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-3--mob.webp`,
+    image: `${URL_TO_ASSETS}/final/2/surv.mp4`,
+    imageMob: `${URL_TO_ASSETS_MOB}/final/2/surv.mp4`,
     video: null,
     videoMob: null,
     buttons: [
@@ -523,8 +524,8 @@ const SLIDES_CONFIG = [
     id: 'end4-1',
     text: 'Танти наслаждается мерцанием и находит свой идеальный баланс: пьет чай из собранных трав, угощает бурундука печеньем и делает красивое селфи на фоне светлячков. Абсолютная гармония!',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-1.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-1--mob.webp`,
+    image: `${URL_TO_ASSETS}/final/3.mp4`,
+    imageMob: `${URL_TO_ASSETS_MOB}/final/3.mp4`,
     video: null,
     videoMob: null,
     buttons: [
@@ -545,8 +546,8 @@ const SLIDES_CONFIG = [
     id: 'end5-1',
     text: 'Танти хочет сделать фото. Вдруг ворона садится прямо на край селфи-палки, и светлячки начинают мигать в едином ритме с крыльями. Крупный светлячок доверчиво садится Танти на нос. ',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-2.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-2--mob.webp`,
+    image: `${URL_TO_ASSETS}/final/4.mp4`,
+    imageMob: `${URL_TO_ASSETS_MOB}/final/4.mp4`,
     video: null,
     videoMob: null,
     buttons: [
@@ -567,8 +568,8 @@ const SLIDES_CONFIG = [
     id: 'restart',
     text: 'Сыграй еще раз другим стилем, чтобы открыть остальные концовки ',
     textCenter: true,
-    image: `${URL_TO_ASSETS}/img/swamp-3.webp`,
-    imageMob: `${URL_TO_ASSETS}/img/swamp-3--mob.webp`,
+    image: `${URL_TO_ASSETS}/final/5.webp`,
+    imageMob: `${URL_TO_ASSETS_MOB}/final/5.webp`,
     video: null,
     videoMob: null,
     buttons: [
@@ -584,9 +585,9 @@ const SLIDES_CONFIG = [
 ];
 
 const ACHIEVEMENTS_CONFIG = {
-  tehn: { title: 'технологиям', icon: `${URL_TO_ASSETS}/img/tehn.webp` },
-  social: { title: 'общению', icon: `${URL_TO_ASSETS}/img/social.webp` },
-  survival: { title: 'выживанию', icon: `${URL_TO_ASSETS}/img/survival.webp` }
+  tehn: { title: 'технологиям', icon: `${URL_TO_ASSETS_COMMON}/tehn.webp` },
+  social: { title: 'общению', icon: `${URL_TO_ASSETS_COMMON}/social.webp` },
+  survival: { title: 'выживанию', icon: `${URL_TO_ASSETS_COMMON}/survival.webp` }
 };
 
 const ENDINGS_CONFIG = {
@@ -613,12 +614,12 @@ const ENDINGS_CONFIG = {
 };
 
 const BACKPACK_CONFIG = {
-  icon: `${URL_TO_ASSETS}/img/backpack.webp`,
-  backbackground: `${URL_TO_ASSETS}/img/backpackBg.webp`,
-  disclaimerDesk: `${URL_TO_ASSETS}/img/disclaimerDesk.svg`,
-  disclaimerMob: `${URL_TO_ASSETS}/img/disclaimerMob.svg`,
+  icon: `${URL_TO_ASSETS_COMMON}/backpack.webp`,
+  backbackground: `${URL_TO_ASSETS_COMMON}/backpackBg.webp`,
+  disclaimerDesk: `${URL_TO_ASSETS_COMMON}/disclaimerDesk.svg`,
+  disclaimerMob: `${URL_TO_ASSETS_COMMON}/disclaimerMob.svg`,
   add: 'Реклама',
-  picture: `${URL_TO_ASSETS}/img/backpackMain.webp`,
+  picture: `${URL_TO_ASSETS_COMMON}/backpackMain.webp`,
   title: 'Ваш рюкзак',
   desc: ' Здесь находятся предметы, которые могут помочь Танти в своем путешествии',
   btnText: 'Продолжить путешествие'
@@ -828,13 +829,13 @@ function initGameEngine() {
     overlay.innerHTML = `
     <div class="ending-overlay__card">
       <div class="ending-overlay__bg">
-        <img src="${URL_TO_ASSETS}/img/endAchBg.webp" alt="" />
+        <img src="${URL_TO_ASSETS_COMMON}/endAchBg.webp" alt="" />
       </div>
 
           <div class="ending-overlay__content">
       <div class="ending-overlay__achive">
         <div class="ending-overlay__img">
-          <img src="${URL_TO_ASSETS}/img/endAchImg.webp" alt="${endingData.title}" />
+          <img src="${URL_TO_ASSETS_COMMON}/endAchImg.webp" alt="${endingData.title}" />
         </div>
 
         <div class="ending-overlay__body">
@@ -854,7 +855,7 @@ function initGameEngine() {
       <div class="ending-overlay__btn-box">
         <div class="ending-overlay__end">
           <div class="ending-overlay__end-img">
-            <img src="${URL_TO_ASSETS}/img/prize.webp" alt="${endingData.title}" />
+            <img src="${URL_TO_ASSETS_COMMON}/prize.webp" alt="${endingData.title}" />
           </div>
           <p class="ending-overlay__end-text">Открыта новая концовка!</p>
         </div>
@@ -1154,9 +1155,9 @@ function initGameEngine() {
 function preloadOverlayAssets() {
   const overlayUrls = new Set([
     ...Object.values(ACHIEVEMENTS_CONFIG).map((item) => item.icon),
-    `${URL_TO_ASSETS}/img/endAchBg.webp`,
-    `${URL_TO_ASSETS}/img/endAchImg.webp`,
-    `${URL_TO_ASSETS}/img/prize.webp`,
+    `${URL_TO_ASSETS_COMMON}/endAchBg.webp`,
+    `${URL_TO_ASSETS_COMMON}/endAchImg.webp`,
+    `${URL_TO_ASSETS_COMMON}/prize.webp`,
     BACKPACK_CONFIG.icon,
     BACKPACK_CONFIG.backbackground,
     BACKPACK_CONFIG.picture,
@@ -1193,8 +1194,7 @@ function initModalShell() {
   let modalOverlay, modalContent, videoButton, closeButton;
   const config = {
     trigger: {
-      bgImage: 'https://storage.yandexcloud.net/external-assets/tantum/modal-game/circle.png',
-      previewVideo: 'https://storage.yandexcloud.net/external-assets/tantum/modal-game/hello.mp4'
+      bgImage: `${URL_TO_ASSETS_COMMON}/Circle.png`,
     }
   };
   function createTrigger(conf) {
@@ -1205,17 +1205,7 @@ function initModalShell() {
     const img = document.createElement('img');
     img.src = conf.trigger.bgImage;
     img.className = 'trigger__bg';
-    const video = document.createElement('video');
-    video.className = 'trigger__video';
-    video.muted = video.loop = video.autoplay = true;
-    video.setAttribute('muted', '');
-    video.setAttribute('playsinline', '');
-    video.setAttribute('webkit-playsinline', '');
-    const source = document.createElement('source');
-    source.src = conf.trigger.previewVideo;
-    source.type = 'video/mp4';
-    video.appendChild(source);
-    inner.append(img, video);
+    inner.append(img);
     btn.appendChild(inner);
     return btn;
   }
@@ -1293,7 +1283,7 @@ function initModalShell() {
 
 function addResponsiveStyles() {
   const style = document.createElement('style');
-  style.textContent = `@charset "UTF-8";.modal-game__container .backpack-badge::after,.modal-game__container .btn--img::before{content:"";aspect-ratio:1/1;background-image:url("data:image/svg+xml,%3Csvg  viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='36' height='36' rx='18' fill='white'/%3E%3Cpath d='M15 24L19.9409 19.0591C20.4402 18.5598 20.6898 18.3102 20.6898 18C20.6898 17.6898 20.4402 17.4402 19.9409 16.9409L15 12' stroke='%23163F26' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}@font-face{font-family:Gilroy;src:url("${URL_TO_ASSETS}/fonts/Gilroy-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:Gilroy;src:url("${URL_TO_ASSETS}/fonts/Gilroy-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}:root{--wiepotrDeviseWith:1920}.trigger{position:fixed;bottom:calc(110 * 100vw / var(--wiepotrDeviseWith));right:calc(100 * 100vw / var(--wiepotrDeviseWith));width:calc(180 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1;background:0 0;border:none;cursor:pointer;border-radius:50%;z-index:1039;padding:0}.trigger__inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;border-radius:50%}.trigger__bg{width:100%;height:100%;-o-object-fit:contain;object-fit:contain;position:absolute;z-index:1}.trigger__video{width:80%;height:70%;-o-object-fit:contain;object-fit:contain;z-index:2;border-radius:50%}.modal-game__overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;z-index:110001;opacity:0;transition:opacity .3s;cursor:pointer}.modal-game__overlay *{padding:0;margin:0;box-sizing:border-box}.modal-game__overlay img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}.modal-game__modal{cursor:default;border-radius:calc(12 * 100vw / var(--wiepotrDeviseWith));overflow:hidden;position:relative;transform:translateY(calc(30 * 100vw / var(--wiepotrDeviseWith)));transition:transform .3s;width:calc(1367 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:16/9;background:#555754!important;font-family:Gilroy,Montserrat,"Century Gothic",Futura,sans-serif;font-weight:700;color:#fff}.modal-game__container{width:100%;height:100%;position:relative}.modal-game__close{position:absolute;flex-shrink:0;top:calc(57 * 100vw / var(--wiepotrDeviseWith));right:calc(57 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.5);color:#fff;border:none;border-radius:50%;cursor:pointer;z-index:1110;width:calc(50 * 100vw / var(--wiepotrDeviseWith));font-size:calc(24 * 100vw / var(--wiepotrDeviseWith))}.modal-game__close svg{width:calc(21 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1}.modal-game__slides-box{display:grid;width:100%;height:100%;position:relative}.modal-game__container img{content-visibility:auto}.modal-game__container button{background:0 0;outline:unset;border:unset;color:inherit;font-family:inherit;cursor:pointer}.modal-game__container .slide__btn{outline:0;border:none;text-align:center;width:-moz-fit-content;width:fit-content;font-size:calc(34 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .btn--inset{position:absolute;inset:0;opacity:0;width:100%}.modal-game__container .btn--green{backdrop-filter:blur(calc(5 * 100vw / var(--wiepotrDeviseWith)));-webkit-backdrop-filter:blur(calc(5 * 100vw / var(--wiepotrDeviseWith)));padding:calc(17 * 100vw / var(--wiepotrDeviseWith)) calc(38 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(60 * 100vw / var(--wiepotrDeviseWith));background:linear-gradient(180deg,#459f07 0,#193903 144.59%);white-space:nowrap;flex-shrink:0}@media (max-width:48em){:root{--wiepotrDeviseWith:375}.trigger{bottom:calc(20 * 100vw / var(--wiepotrDeviseWith));width:calc(100 * 100vw / var(--wiepotrDeviseWith));right:calc(16 * 100vw / var(--wiepotrDeviseWith))}.modal-game__modal{width:calc(350 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:3/4}.modal-game__close svg{width:calc(13 * 100vw / var(--wiepotrDeviseWith))}.modal-game__close{top:calc(12 * 100vw / var(--wiepotrDeviseWith));right:calc(12 * 100vw / var(--wiepotrDeviseWith));font-size:calc(14 * 100vw / var(--wiepotrDeviseWith));width:calc(30 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__btn{width:100%;font-size:calc(12 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .btn--green{padding:calc(7 * 100vw / var(--wiepotrDeviseWith)) calc(14 * 100vw / var(--wiepotrDeviseWith))}}.modal-game__container .btn--back{padding:calc(15 * 100vw / var(--wiepotrDeviseWith)) calc(36 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(60 * 100vw / var(--wiepotrDeviseWith));border:calc(2 * 100vw / var(--wiepotrDeviseWith)) solid rgba(255,255,255,.5);background:0 0}@media (max-width:48em){.modal-game__container .btn--back{padding:calc(5 * 100vw / var(--wiepotrDeviseWith)) calc(12 * 100vw / var(--wiepotrDeviseWith))}}.modal-game__container .btn--img{position:relative;width:100%;aspect-ratio:407/240;background:0 0;border:calc(2 * 100vw / var(--wiepotrDeviseWith)) solid var(--white-50);border-radius:calc(24 * 100vw / var(--wiepotrDeviseWith));overflow:hidden;padding:calc(20 * 100vw / var(--wiepotrDeviseWith));display:flex;flex-direction:column;gap:calc(20 * 100vw / var(--wiepotrDeviseWith));align-items:center;justify-content:flex-end;font-size:calc(24 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .btn--img::before{width:calc(36 * 100vw / var(--wiepotrDeviseWith));flex-shrink:0;z-index:2}.modal-game__container .btn--img span{position:relative;z-index:1}@media (max-width:48em){.modal-game__container .btn--img::before{width:calc(28 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .btn--img{aspect-ratio:318/70;padding:calc(16 * 100vw / var(--wiepotrDeviseWith)) calc(12 * 100vw / var(--wiepotrDeviseWith));font-size:calc(12 * 100vw / var(--wiepotrDeviseWith));align-items:center;justify-content:space-between;flex-direction:row-reverse;border-radius:calc(12 * 100vw / var(--wiepotrDeviseWith));text-align:left}.modal-game__container .btn--img span{width:calc(123 * 100vw / var(--wiepotrDeviseWith));display:block}}.modal-game__container .btn--img picture{position:absolute;inset:0;width:100%;height:100%}.modal-game__container .slide{backface-visibility:hidden;transform:translateZ(0);will-change:opacity;overflow:hidden;grid-column:1/-1;grid-row:1/-1;position:absolute;inset:0;width:100%;height:100%;box-sizing:border-box;display:flex;justify-content:flex-end;gap:calc(20 * 100vw / var(--wiepotrDeviseWith));flex-direction:column;opacity:0;pointer-events:none;transition:opacity .8s;padding:calc(50 * 100vw / var(--wiepotrDeviseWith)) calc(85 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide--active{opacity:1;pointer-events:auto}.modal-game__container .slide__bg{position:absolute;inset:0}.modal-game__container .slide__bg img,.modal-game__container .slide__bg picture,.modal-game__container .slide__bg video{backface-visibility:hidden;transform:translateZ(0);width:100%;height:100%;display:block;-o-object-fit:cover;object-fit:cover}.modal-game__container .slide__content{display:flex;flex-direction:column;width:100%;z-index:2;gap:calc(20 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__content--isDisclaimer{flex-direction:row;align-items:center}.modal-game__container .slide__text-box{display:flex;gap:calc(20 * 100vw / var(--wiepotrDeviseWith));justify-content:space-between;align-items:flex-start}.modal-game__container .slide__text{margin:0;flex-grow:1;font-size:calc(45 * 100vw / var(--wiepotrDeviseWith));line-height:normal}.modal-game__container .slide__text--isChoices{text-align:center}.modal-game__container .slide__arr{aspect-ratio:63/98;flex-shrink:0;width:calc(50 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__arr svg{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}.modal-game__container .slide__btn-box{display:flex;flex-wrap:wrap;gap:calc(14 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__btn-box:has(.btn--back){display:grid;grid-template-columns:repeat(2,1fr)}.modal-game__container .slide__btn-box:has(.btn--back) .slide__btn{width:100%}.modal-game__container .slide__btn-box:has(.btn--inset){position:absolute;inset:0}@media (max-width:48em){.modal-game__container .slide{padding:calc(30 * 100vw / var(--wiepotrDeviseWith)) calc(16 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__content--isDisclaimer{flex-direction:column;gap:gap(8)}.modal-game__container .slide__content{gap:gap(10)}.modal-game__container .slide__text--center{text-align:center}.modal-game__container .slide__text{font-size:calc(14 * 100vw / var(--wiepotrDeviseWith));line-height:unset}.modal-game__container .slide__arr{width:calc(17 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__btn-box:has(.btn--back){display:flex;flex-direction:column}.modal-game__container .slide__btn-box{width:100%;display:flex;flex-direction:column;gap:calc(10 * 100vw / var(--wiepotrDeviseWith))}}.modal-game__container .slide__btn-box--isChoices{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(13 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(26 * 100vw / var(--wiepotrDeviseWith));padding:calc(8 * 100vw / var(--wiepotrDeviseWith));box-shadow:calc(5 * 100vw / var(--wiepotrDeviseWith)) calc(4 * 100vw / var(--wiepotrDeviseWith)) calc(22 * 100vw / var(--wiepotrDeviseWith)) 0 rgba(0,0,0,.55);background:rgba(255,255,255,.5);position:absolute;top:calc(128 * 100vw / var(--wiepotrDeviseWith));left:50%;transform:translateX(-50%);width:calc(1236 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__disclaimer-box{display:flex;align-items:center;flex-direction:column;margin-bottom:calc(8 * 100vw / var(--wiepotrDeviseWith));gap:calc(13 * 100vw / var(--wiepotrDeviseWith));position:relative;z-index:10}.modal-game__container .slide__disclaimer-add{font-size:calc(17 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__disclaimer{width:calc(1310 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1507/95}.modal-game__container .achiev-counter{position:absolute;top:calc(40 * 100vw / var(--wiepotrDeviseWith));left:50%;transform:translateX(-50%);display:flex;gap:calc(16 * 100vw / var(--wiepotrDeviseWith));z-index:1100;pointer-events:none}.modal-game__container .achiev-counter__badge{display:flex;align-items:center;gap:calc(8 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .achiev-counter__img{width:calc(80 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1;-o-object-fit:contain;object-fit:contain}.modal-game__container .achiev-counter__count{color:#fff;font-size:calc(45 * 100vw / var(--wiepotrDeviseWith));font-weight:700}.modal-game__container .achiev-overlay,.modal-game__container .ending-overlay{position:absolute;inset:0;backdrop-filter:blur(calc(10 * 100vw / var(--wiepotrDeviseWith)));-webkit-backdrop-filter:blur(calc(10 * 100vw / var(--wiepotrDeviseWith)));background:rgba(10,22,2,.4);display:flex;align-items:center;justify-content:center;z-index:1200;opacity:0;transition:opacity .4s;pointer-events:auto}.modal-game__container .achiev-overlay--show{opacity:1}.modal-game__container .achiev-overlay--show .achiev-overlay__card{transform:scale(1)}.modal-game__container .achiev-overlay__card{display:flex;flex-direction:column;align-items:center;transform:scale(.4);transition:transform .4s}.modal-game__container .achiev-overlay__body{display:flex;align-items:center;gap:calc(8 * 100vw / var(--wiepotrDeviseWith));font-size:calc(45 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .achiev-overlay__img{aspect-ratio:1;width:calc(80 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay--show,.modal-game__container .ending-overlay--show .ending-overlay__card{opacity:1}.modal-game__container .ending-overlay--show .ending-overlay__content{scale:1}.modal-game__container .ending-overlay__card{display:flex;align-items:center;justify-content:center;align-items:center;transition:opacity .3s;width:100%;height:100%;position:relative}.modal-game__container .ending-overlay__bg{width:100%;height:100%;position:absolute;pointer-events:none;inset:0}.modal-game__container .ending-overlay__bg img{width:68%;height:107%;-webkit-mask-image:radial-gradient(circle at center,black 15%,rgba(0,0,0,0.1) 94%,transparent 96%);mask-image:radial-gradient(circle at center,black 15%,rgba(0,0,0,0.1) 94%,transparent 96%)}.modal-game__container .ending-overlay__content{display:flex;flex-direction:column;gap:calc(30 * 100vw / var(--wiepotrDeviseWith));transition:scale .3s;scale:0.4}.modal-game__container .ending-overlay__achive{margin-left:calc(134 * 100vw / var(--wiepotrDeviseWith));width:calc(646 * 100vw / var(--wiepotrDeviseWith));position:relative}.modal-game__container .ending-overlay__img{width:calc(357 * 100vw / var(--wiepotrDeviseWith));position:absolute;aspect-ratio:1;left:calc(-172 * 100vw / var(--wiepotrDeviseWith));bottom:0}.modal-game__container .ending-overlay__body{border-radius:calc(26 * 100vw / var(--wiepotrDeviseWith));background:rgba(255,255,255,.7);padding:calc(34 * 100vw / var(--wiepotrDeviseWith)) calc(34 * 100vw / var(--wiepotrDeviseWith)) calc(34 * 100vw / var(--wiepotrDeviseWith)) calc(186 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__body-inner{border-radius:calc(23 * 100vw / var(--wiepotrDeviseWith));padding:calc(17 * 100vw / var(--wiepotrDeviseWith));background:#fff;color:#163f26;display:flex;flex-direction:column;gap:calc(4 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__head{display:flex;flex-direction:column;gap:calc(1 * 100vw / var(--wiepotrDeviseWith));text-align:center;align-items:center}.modal-game__container .ending-overlay__subtitle{font-size:calc(15 * 100vw / var(--wiepotrDeviseWith));font-weight:500}.modal-game__container .ending-overlay__title{font-weight:700;font-size:calc(45 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__result{display:flex;flex-direction:column;align-items:center;text-align:center;gap:calc(8 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__result-title{font-size:calc(15 * 100vw / var(--wiepotrDeviseWith));font-weight:500}.modal-game__container .ending-overlay__counter{display:flex;align-items:center;justify-content:center;gap:calc(30 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__badge{border-radius:calc(9 * 100vw / var(--wiepotrDeviseWith));padding:calc(8 * 100vw / var(--wiepotrDeviseWith)) calc(14 * 100vw / var(--wiepotrDeviseWith));gap:calc(2 * 100vw / var(--wiepotrDeviseWith));display:flex;align-items:center;justify-content:space-between;background:#eff6ef;display:flex;align-items:center}.modal-game__container .ending-overlay__badge-img{width:calc(60 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1}.modal-game__container .ending-overlay__count{font-weight:700;font-size:calc(34 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__btn-box{display:flex;align-items:center;justify-content:space-between}.modal-game__container .ending-overlay__end{display:flex;align-items:center}.modal-game__container .ending-overlay__end-img{position:absolute;border-radius:calc(14 * 100vw / var(--wiepotrDeviseWith));width:calc(93 * 100vw / var(--wiepotrDeviseWith));height:calc(85 * 100vw / var(--wiepotrDeviseWith));left:0;overflow:hidden}.modal-game__container .ending-overlay__end-text{background:rgba(78,129,42,.6);color:#fff;font-weight:500;line-height:110%;border:calc(.18 * 100vw / var(--wiepotrDeviseWith)) solid #fff;border-radius:calc(17 * 100vw / var(--wiepotrDeviseWith));padding:calc(5 * 100vw / var(--wiepotrDeviseWith)) calc(10 * 100vw / var(--wiepotrDeviseWith)) calc(5 * 100vw / var(--wiepotrDeviseWith)) calc(110 * 100vw / var(--wiepotrDeviseWith));width:calc(294 * 100vw / var(--wiepotrDeviseWith));font-size:calc(22 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay .btn--green{padding:calc(17 * 100vw / var(--wiepotrDeviseWith)) calc(103 * 100vw / var(--wiepotrDeviseWith));white-space:nowrap;flex-shrink:0}.modal-game__container .backpack-badge{position:absolute;top:calc(40 * 100vw / var(--wiepotrDeviseWith));left:calc(57 * 100vw / var(--wiepotrDeviseWith));display:flex;align-items:center;gap:calc(10 * 100vw / var(--wiepotrDeviseWith));padding:calc(8 * 100vw / var(--wiepotrDeviseWith)) calc(12 * 100vw / var(--wiepotrDeviseWith));background:rgba(239,246,239,.5);border-radius:calc(50 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-badge::after{width:calc(36 * 100vw / var(--wiepotrDeviseWith));flex-shrink:0;z-index:2}.modal-game__container .backpack-badge__img{width:calc(52 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1;-o-object-fit:contain;object-fit:contain}.modal-game__container .backpack-modal{transform:translateZ(0);will-change:opacity;position:absolute;width:100%;height:100%;inset:0;z-index:10;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .5s,visibility .5s,pointer-events .5s}.modal-game__container .backpack-modal.isOpen{opacity:1;visibility:visible;pointer-events:fill}.modal-game__container .backpack-modal.isOpen .backpack-modal__body{opacity:1;scale:0.86}.modal-game__container .backpack-modal__inner{width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center}.modal-game__container .backpack-modal__bg{position:absolute;width:100%;height:100%;inset:0}.modal-game__container .backpack-modal__body{position:absolute;scale:0.7;opacity:0;transition:opacity .3s,scale .3s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:calc(32 * 100vw / var(--wiepotrDeviseWith));transform:translateZ(0);will-change:transform}.modal-game__container .backpack-modal__content{display:flex;flex-direction:column;align-items:center;position:relative;margin-left:calc(215 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__img{position:absolute;width:calc(778 * 100vw / var(--wiepotrDeviseWith));height:calc(440 * 100vw / var(--wiepotrDeviseWith));top:calc(-43 * 100vw / var(--wiepotrDeviseWith));z-index:2;left:calc(-458 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__info{border-radius:calc(29 * 100vw / var(--wiepotrDeviseWith));width:calc(733 * 100vw / var(--wiepotrDeviseWith));--webkit-backdrop-filter:blur(pxToRemMix(4));backdrop-filter:blur(calc(4 * 100vw / var(--wiepotrDeviseWith)));background:rgba(255,255,255,.7);padding:calc(72 * 100vw / var(--wiepotrDeviseWith)) calc(48 * 100vw / var(--wiepotrDeviseWith)) calc(72 * 100vw / var(--wiepotrDeviseWith)) calc(238 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__info-body{border-radius:calc(26 * 100vw / var(--wiepotrDeviseWith));padding:calc(48 * 100vw / var(--wiepotrDeviseWith)) calc(35 * 100vw / var(--wiepotrDeviseWith));background:#fff;display:flex;align-items:center;flex-direction:column;color:#163f26;gap:calc(10 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__title{font-weight:700;font-size:calc(52 * 100vw / var(--wiepotrDeviseWith));text-align:center}.modal-game__container .backpack-modal__desc{font-weight:400;font-size:calc(17 * 100vw / var(--wiepotrDeviseWith));text-align:center;width:calc(260 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__disclaimer-box{display:flex;align-items:center;flex-direction:column;position:relative;align-self:flex-end;margin-bottom:calc(8 * 100vw / var(--wiepotrDeviseWith));gap:calc(13 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__disclaimer-add{font-size:calc(17 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__disclaimer{width:calc(1310 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1507/95}@media (max-width:48em){.modal-game__container .slide__btn-box--isChoices{display:flex;flex-direction:column;gap:calc(4 * 100vw / var(--wiepotrDeviseWith));width:calc(100% - 24 * 100vw / var(--wiepotrDeviseWith));top:calc(60 * 100vw / var(--wiepotrDeviseWith));padding:calc(3 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(12 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__disclaimer-add,.modal-game__container .slide__disclaimer-add{font-size:calc(7 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__disclaimer{width:calc(325 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:325/50}.modal-game__container .achiev-counter{top:calc(12 * 100vw / var(--wiepotrDeviseWith));gap:calc(10 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .achiev-counter__img,.modal-game__container .achiev-overlay__img{width:calc(40 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .achiev-counter__count,.modal-game__container .achiev-overlay__body,.modal-game__container .ending-overlay__title{font-size:calc(14 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__bg img{width:100%;height:100%;-webkit-mask-image:unset;mask-image:unset}.modal-game__container .ending-overlay__content{gap:calc(12 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__achive{width:calc(164 * 100vw / var(--wiepotrDeviseWith));margin-left:unset;margin-top:calc(145 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__img{width:calc(174 * 100vw / var(--wiepotrDeviseWith));left:50%;transform:translateX(-50%);top:calc(-145 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__body{padding:calc(24 * 100vw / var(--wiepotrDeviseWith)) calc(6 * 100vw / var(--wiepotrDeviseWith)) calc(6 * 100vw / var(--wiepotrDeviseWith)) calc(6 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(5 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__body-inner{border-radius:calc(5 * 100vw / var(--wiepotrDeviseWith));padding:calc(12 * 100vw / var(--wiepotrDeviseWith)) calc(14 * 100vw / var(--wiepotrDeviseWith)) calc(10 * 100vw / var(--wiepotrDeviseWith));gap:calc(6 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__subtitle{font-size:calc(9 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__result{gap:calc(4 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__result-title{font-size:calc(9 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__counter{gap:calc(10 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__badge{padding:calc(2 * 100vw / var(--wiepotrDeviseWith)) calc(4 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(5 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__badge-img{width:calc(20 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__count{font-size:calc(10 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__btn-box{flex-direction:column;gap:calc(12 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__end{width:100%}.modal-game__container .ending-overlay__end-img{border-radius:calc(6 * 100vw / var(--wiepotrDeviseWith));width:calc(37 * 100vw / var(--wiepotrDeviseWith));height:calc(34 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__end-text{border:calc(.25 * 100vw / var(--wiepotrDeviseWith)) solid #fff;border-radius:calc(6 * 100vw / var(--wiepotrDeviseWith));padding:calc(8 * 100vw / var(--wiepotrDeviseWith)) calc(15 * 100vw / var(--wiepotrDeviseWith)) calc(8 * 100vw / var(--wiepotrDeviseWith)) calc(50 * 100vw / var(--wiepotrDeviseWith));width:100%;font-size:calc(8 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay .btn--green{padding:calc(7 * 100vw / var(--wiepotrDeviseWith)) calc(50 * 100vw / var(--wiepotrDeviseWith));width:100%}.modal-game__container .backpack-badge{top:calc(12 * 100vw / var(--wiepotrDeviseWith));left:calc(12 * 100vw / var(--wiepotrDeviseWith));padding:calc(4 * 100vw / var(--wiepotrDeviseWith));gap:calc(4 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-badge::after,.modal-game__container .backpack-badge__img{width:calc(28 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal.isOpen .backpack-modal__body{scale:1}.modal-game__container .backpack-modal__body{gap:calc(8 * 100vw / var(--wiepotrDeviseWith));margin-top:calc(45 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__content{margin-left:unset}.modal-game__container .backpack-modal__img{margin-left:unset;top:calc(-132 * 100vw / var(--wiepotrDeviseWith));left:50%;transform:translateX(-50%);width:calc(350 * 100vw / var(--wiepotrDeviseWith));height:calc(194 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__info{background:rgba(255,255,255,.7);padding:calc(76 * 100vw / var(--wiepotrDeviseWith)) calc(12 * 100vw / var(--wiepotrDeviseWith)) calc(12 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(5 * 100vw / var(--wiepotrDeviseWith));width:calc(216 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__info-body{border-radius:calc(5 * 100vw / var(--wiepotrDeviseWith));padding:calc(12 * 100vw / var(--wiepotrDeviseWith)) calc(10 * 100vw / var(--wiepotrDeviseWith));gap:calc(5 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__title{font-size:calc(18 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__desc{width:100%;font-size:calc(12 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__disclaimer{width:calc(325 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:325/50}}`;
+  style.textContent = `@charset "UTF-8";.modal-game__container .backpack-badge::after,.modal-game__container .btn--img::before{content:"";aspect-ratio:1/1;background-image:url("data:image/svg+xml,%3Csvg  viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='36' height='36' rx='18' fill='white'/%3E%3Cpath d='M15 24L19.9409 19.0591C20.4402 18.5598 20.6898 18.3102 20.6898 18C20.6898 17.6898 20.4402 17.4402 19.9409 16.9409L15 12' stroke='%23163F26' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}@font-face{font-family:Gilroy;src:url("${URL_TO_ASSETS_COMMON}/fonts/Gilroy-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:Gilroy;src:url("${URL_TO_ASSETS_COMMON}/fonts/Gilroy-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}:root{--wiepotrDeviseWith:1920}.trigger{position:fixed;bottom:calc(110 * 100vw / var(--wiepotrDeviseWith));right:calc(100 * 100vw / var(--wiepotrDeviseWith));width:calc(180 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1;background:0 0;border:none;cursor:pointer;border-radius:50%;z-index:1039;padding:0}.trigger__inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;border-radius:50%}.trigger__bg{width:100%;height:100%;-o-object-fit:contain;object-fit:contain;position:absolute;z-index:1}.trigger__video{width:80%;height:70%;-o-object-fit:contain;object-fit:contain;z-index:2;border-radius:50%}.modal-game__overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;z-index:110001;opacity:0;transition:opacity .3s;cursor:pointer}.modal-game__overlay *{padding:0;margin:0;box-sizing:border-box}.modal-game__overlay img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}.modal-game__modal{cursor:default;border-radius:calc(12 * 100vw / var(--wiepotrDeviseWith));overflow:hidden;position:relative;transform:translateY(calc(30 * 100vw / var(--wiepotrDeviseWith)));transition:transform .3s;width:calc(1367 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:16/9;background:#555754!important;font-family:Gilroy,Montserrat,"Century Gothic",Futura,sans-serif;font-weight:700;color:#fff}.modal-game__container{width:100%;height:100%;position:relative}.modal-game__close{position:absolute;flex-shrink:0;top:calc(57 * 100vw / var(--wiepotrDeviseWith));right:calc(57 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.5);color:#fff;border:none;border-radius:50%;cursor:pointer;z-index:1110;width:calc(50 * 100vw / var(--wiepotrDeviseWith));font-size:calc(24 * 100vw / var(--wiepotrDeviseWith))}.modal-game__close svg{width:calc(21 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1}.modal-game__slides-box{display:grid;width:100%;height:100%;position:relative}.modal-game__container img{content-visibility:auto}.modal-game__container button{background:0 0;outline:unset;border:unset;color:inherit;font-family:inherit;cursor:pointer}.modal-game__container .slide__btn{outline:0;border:none;text-align:center;width:-moz-fit-content;width:fit-content;font-size:calc(34 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .btn--inset{position:absolute;inset:0;opacity:0;width:100%}.modal-game__container .btn--green{backdrop-filter:blur(calc(5 * 100vw / var(--wiepotrDeviseWith)));-webkit-backdrop-filter:blur(calc(5 * 100vw / var(--wiepotrDeviseWith)));padding:calc(17 * 100vw / var(--wiepotrDeviseWith)) calc(38 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(60 * 100vw / var(--wiepotrDeviseWith));background:linear-gradient(180deg,#459f07 0,#193903 144.59%);white-space:nowrap;flex-shrink:0}@media (max-width:48em){:root{--wiepotrDeviseWith:375}.trigger{bottom:calc(20 * 100vw / var(--wiepotrDeviseWith));width:calc(100 * 100vw / var(--wiepotrDeviseWith));right:calc(16 * 100vw / var(--wiepotrDeviseWith))}.modal-game__modal{width:calc(350 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:3/4}.modal-game__close svg{width:calc(13 * 100vw / var(--wiepotrDeviseWith))}.modal-game__close{top:calc(12 * 100vw / var(--wiepotrDeviseWith));right:calc(12 * 100vw / var(--wiepotrDeviseWith));font-size:calc(14 * 100vw / var(--wiepotrDeviseWith));width:calc(30 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__btn{width:100%;font-size:calc(12 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .btn--green{padding:calc(7 * 100vw / var(--wiepotrDeviseWith)) calc(14 * 100vw / var(--wiepotrDeviseWith))}}.modal-game__container .btn--back{padding:calc(15 * 100vw / var(--wiepotrDeviseWith)) calc(36 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(60 * 100vw / var(--wiepotrDeviseWith));border:calc(2 * 100vw / var(--wiepotrDeviseWith)) solid rgba(255,255,255,.5);background:0 0}@media (max-width:48em){.modal-game__container .btn--back{padding:calc(5 * 100vw / var(--wiepotrDeviseWith)) calc(12 * 100vw / var(--wiepotrDeviseWith))}}.modal-game__container .btn--img{position:relative;width:100%;aspect-ratio:407/240;background:0 0;border:calc(2 * 100vw / var(--wiepotrDeviseWith)) solid var(--white-50);border-radius:calc(24 * 100vw / var(--wiepotrDeviseWith));overflow:hidden;padding:calc(20 * 100vw / var(--wiepotrDeviseWith));display:flex;flex-direction:column;gap:calc(20 * 100vw / var(--wiepotrDeviseWith));align-items:center;justify-content:flex-end;font-size:calc(24 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .btn--img::before{width:calc(36 * 100vw / var(--wiepotrDeviseWith));flex-shrink:0;z-index:2}.modal-game__container .btn--img span{position:relative;z-index:1}@media (max-width:48em){.modal-game__container .btn--img::before{width:calc(28 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .btn--img{aspect-ratio:318/70;padding:calc(16 * 100vw / var(--wiepotrDeviseWith)) calc(12 * 100vw / var(--wiepotrDeviseWith));font-size:calc(12 * 100vw / var(--wiepotrDeviseWith));align-items:center;justify-content:space-between;flex-direction:row-reverse;border-radius:calc(12 * 100vw / var(--wiepotrDeviseWith));text-align:left}.modal-game__container .btn--img span{width:calc(123 * 100vw / var(--wiepotrDeviseWith));display:block}}.modal-game__container .btn--img picture{position:absolute;inset:0;width:100%;height:100%}.modal-game__container .slide{backface-visibility:hidden;transform:translateZ(0);will-change:opacity;overflow:hidden;grid-column:1/-1;grid-row:1/-1;position:absolute;inset:0;width:100%;height:100%;box-sizing:border-box;display:flex;justify-content:flex-end;gap:calc(20 * 100vw / var(--wiepotrDeviseWith));flex-direction:column;opacity:0;pointer-events:none;transition:opacity .8s;padding:calc(50 * 100vw / var(--wiepotrDeviseWith)) calc(85 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide--active{opacity:1;pointer-events:auto}.modal-game__container .slide__bg{position:absolute;inset:0}.modal-game__container .slide__bg img,.modal-game__container .slide__bg picture,.modal-game__container .slide__bg video{backface-visibility:hidden;transform:translateZ(0);width:100%;height:100%;display:block;-o-object-fit:cover;object-fit:cover}.modal-game__container .slide__content{display:flex;flex-direction:column;width:100%;z-index:2;gap:calc(20 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__content--isDisclaimer{flex-direction:row;align-items:center}.modal-game__container .slide__text-box{display:flex;gap:calc(20 * 100vw / var(--wiepotrDeviseWith));justify-content:space-between;align-items:flex-start}.modal-game__container .slide__text{margin:0;flex-grow:1;font-size:calc(45 * 100vw / var(--wiepotrDeviseWith));line-height:normal}.modal-game__container .slide__text--isChoices{text-align:center}.modal-game__container .slide__arr{aspect-ratio:63/98;flex-shrink:0;width:calc(50 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__arr svg{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}.modal-game__container .slide__btn-box{display:flex;flex-wrap:wrap;gap:calc(14 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__btn-box:has(.btn--back){display:grid;grid-template-columns:repeat(2,1fr)}.modal-game__container .slide__btn-box:has(.btn--back) .slide__btn{width:100%}.modal-game__container .slide__btn-box:has(.btn--inset){position:absolute;inset:0}@media (max-width:48em){.modal-game__container .slide{padding:calc(30 * 100vw / var(--wiepotrDeviseWith)) calc(16 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__content--isDisclaimer{flex-direction:column;gap:gap(8)}.modal-game__container .slide__content{gap:gap(10)}.modal-game__container .slide__text--center{text-align:center}.modal-game__container .slide__text{font-size:calc(14 * 100vw / var(--wiepotrDeviseWith));line-height:unset}.modal-game__container .slide__arr{width:calc(17 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__btn-box:has(.btn--back){display:flex;flex-direction:column}.modal-game__container .slide__btn-box{width:100%;display:flex;flex-direction:column;gap:calc(10 * 100vw / var(--wiepotrDeviseWith))}}.modal-game__container .slide__btn-box--isChoices{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(13 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(26 * 100vw / var(--wiepotrDeviseWith));padding:calc(8 * 100vw / var(--wiepotrDeviseWith));box-shadow:calc(5 * 100vw / var(--wiepotrDeviseWith)) calc(4 * 100vw / var(--wiepotrDeviseWith)) calc(22 * 100vw / var(--wiepotrDeviseWith)) 0 rgba(0,0,0,.55);background:rgba(255,255,255,.5);position:absolute;top:calc(128 * 100vw / var(--wiepotrDeviseWith));left:50%;transform:translateX(-50%);width:calc(1236 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__disclaimer-box{display:flex;align-items:center;flex-direction:column;margin-bottom:calc(8 * 100vw / var(--wiepotrDeviseWith));gap:calc(13 * 100vw / var(--wiepotrDeviseWith));position:relative;z-index:10}.modal-game__container .slide__disclaimer-add{font-size:calc(17 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__disclaimer{width:calc(1310 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1507/95}.modal-game__container .achiev-counter{position:absolute;top:calc(40 * 100vw / var(--wiepotrDeviseWith));left:50%;transform:translateX(-50%);display:flex;gap:calc(16 * 100vw / var(--wiepotrDeviseWith));z-index:1100;pointer-events:none}.modal-game__container .achiev-counter__badge{display:flex;align-items:center;gap:calc(8 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .achiev-counter__img{width:calc(80 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1;-o-object-fit:contain;object-fit:contain}.modal-game__container .achiev-counter__count{color:#fff;font-size:calc(45 * 100vw / var(--wiepotrDeviseWith));font-weight:700}.modal-game__container .achiev-overlay,.modal-game__container .ending-overlay{position:absolute;inset:0;backdrop-filter:blur(calc(10 * 100vw / var(--wiepotrDeviseWith)));-webkit-backdrop-filter:blur(calc(10 * 100vw / var(--wiepotrDeviseWith)));background:rgba(10,22,2,.4);display:flex;align-items:center;justify-content:center;z-index:1200;opacity:0;transition:opacity .4s;pointer-events:auto}.modal-game__container .achiev-overlay--show{opacity:1}.modal-game__container .achiev-overlay--show .achiev-overlay__card{transform:scale(1)}.modal-game__container .achiev-overlay__card{display:flex;flex-direction:column;align-items:center;transform:scale(.4);transition:transform .4s}.modal-game__container .achiev-overlay__body{display:flex;align-items:center;gap:calc(8 * 100vw / var(--wiepotrDeviseWith));font-size:calc(45 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .achiev-overlay__img{aspect-ratio:1;width:calc(80 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay--show,.modal-game__container .ending-overlay--show .ending-overlay__card{opacity:1}.modal-game__container .ending-overlay--show .ending-overlay__content{scale:1}.modal-game__container .ending-overlay__card{display:flex;align-items:center;justify-content:center;align-items:center;transition:opacity .3s;width:100%;height:100%;position:relative}.modal-game__container .ending-overlay__bg{width:100%;height:100%;position:absolute;pointer-events:none;inset:0}.modal-game__container .ending-overlay__bg img{width:68%;height:107%;-webkit-mask-image:radial-gradient(circle at center,black 15%,rgba(0,0,0,0.1) 94%,transparent 96%);mask-image:radial-gradient(circle at center,black 15%,rgba(0,0,0,0.1) 94%,transparent 96%)}.modal-game__container .ending-overlay__content{display:flex;flex-direction:column;gap:calc(30 * 100vw / var(--wiepotrDeviseWith));transition:scale .3s;scale:0.4}.modal-game__container .ending-overlay__achive{margin-left:calc(134 * 100vw / var(--wiepotrDeviseWith));width:calc(646 * 100vw / var(--wiepotrDeviseWith));position:relative}.modal-game__container .ending-overlay__img{width:calc(357 * 100vw / var(--wiepotrDeviseWith));position:absolute;aspect-ratio:1;left:calc(-172 * 100vw / var(--wiepotrDeviseWith));bottom:0}.modal-game__container .ending-overlay__body{border-radius:calc(26 * 100vw / var(--wiepotrDeviseWith));background:rgba(255,255,255,.7);padding:calc(34 * 100vw / var(--wiepotrDeviseWith)) calc(34 * 100vw / var(--wiepotrDeviseWith)) calc(34 * 100vw / var(--wiepotrDeviseWith)) calc(186 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__body-inner{border-radius:calc(23 * 100vw / var(--wiepotrDeviseWith));padding:calc(17 * 100vw / var(--wiepotrDeviseWith));background:#fff;color:#163f26;display:flex;flex-direction:column;gap:calc(4 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__head{display:flex;flex-direction:column;gap:calc(1 * 100vw / var(--wiepotrDeviseWith));text-align:center;align-items:center}.modal-game__container .ending-overlay__subtitle{font-size:calc(15 * 100vw / var(--wiepotrDeviseWith));font-weight:500}.modal-game__container .ending-overlay__title{font-weight:700;font-size:calc(45 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__result{display:flex;flex-direction:column;align-items:center;text-align:center;gap:calc(8 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__result-title{font-size:calc(15 * 100vw / var(--wiepotrDeviseWith));font-weight:500}.modal-game__container .ending-overlay__counter{display:flex;align-items:center;justify-content:center;gap:calc(30 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__badge{border-radius:calc(9 * 100vw / var(--wiepotrDeviseWith));padding:calc(8 * 100vw / var(--wiepotrDeviseWith)) calc(14 * 100vw / var(--wiepotrDeviseWith));gap:calc(2 * 100vw / var(--wiepotrDeviseWith));display:flex;align-items:center;justify-content:space-between;background:#eff6ef;display:flex;align-items:center}.modal-game__container .ending-overlay__badge-img{width:calc(60 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1}.modal-game__container .ending-overlay__count{font-weight:700;font-size:calc(34 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__btn-box{display:flex;align-items:center;justify-content:space-between}.modal-game__container .ending-overlay__end{display:flex;align-items:center}.modal-game__container .ending-overlay__end-img{position:absolute;border-radius:calc(14 * 100vw / var(--wiepotrDeviseWith));width:calc(93 * 100vw / var(--wiepotrDeviseWith));height:calc(85 * 100vw / var(--wiepotrDeviseWith));left:0;overflow:hidden}.modal-game__container .ending-overlay__end-text{background:rgba(78,129,42,.6);color:#fff;font-weight:500;line-height:110%;border:calc(.18 * 100vw / var(--wiepotrDeviseWith)) solid #fff;border-radius:calc(17 * 100vw / var(--wiepotrDeviseWith));padding:calc(5 * 100vw / var(--wiepotrDeviseWith)) calc(10 * 100vw / var(--wiepotrDeviseWith)) calc(5 * 100vw / var(--wiepotrDeviseWith)) calc(110 * 100vw / var(--wiepotrDeviseWith));width:calc(294 * 100vw / var(--wiepotrDeviseWith));font-size:calc(22 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay .btn--green{padding:calc(17 * 100vw / var(--wiepotrDeviseWith)) calc(103 * 100vw / var(--wiepotrDeviseWith));white-space:nowrap;flex-shrink:0}.modal-game__container .backpack-badge{position:absolute;top:calc(40 * 100vw / var(--wiepotrDeviseWith));left:calc(57 * 100vw / var(--wiepotrDeviseWith));display:flex;align-items:center;gap:calc(10 * 100vw / var(--wiepotrDeviseWith));padding:calc(8 * 100vw / var(--wiepotrDeviseWith)) calc(12 * 100vw / var(--wiepotrDeviseWith));background:rgba(239,246,239,.5);border-radius:calc(50 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-badge::after{width:calc(36 * 100vw / var(--wiepotrDeviseWith));flex-shrink:0;z-index:2}.modal-game__container .backpack-badge__img{width:calc(52 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1;-o-object-fit:contain;object-fit:contain}.modal-game__container .backpack-modal{transform:translateZ(0);will-change:opacity;position:absolute;width:100%;height:100%;inset:0;z-index:10;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .5s,visibility .5s,pointer-events .5s}.modal-game__container .backpack-modal.isOpen{opacity:1;visibility:visible;pointer-events:fill}.modal-game__container .backpack-modal.isOpen .backpack-modal__body{opacity:1;scale:0.86}.modal-game__container .backpack-modal__inner{width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center}.modal-game__container .backpack-modal__bg{position:absolute;width:100%;height:100%;inset:0}.modal-game__container .backpack-modal__body{position:absolute;scale:0.7;opacity:0;transition:opacity .3s,scale .3s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:calc(32 * 100vw / var(--wiepotrDeviseWith));transform:translateZ(0);will-change:transform}.modal-game__container .backpack-modal__content{display:flex;flex-direction:column;align-items:center;position:relative;margin-left:calc(215 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__img{position:absolute;width:calc(778 * 100vw / var(--wiepotrDeviseWith));height:calc(440 * 100vw / var(--wiepotrDeviseWith));top:calc(-43 * 100vw / var(--wiepotrDeviseWith));z-index:2;left:calc(-458 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__info{border-radius:calc(29 * 100vw / var(--wiepotrDeviseWith));width:calc(733 * 100vw / var(--wiepotrDeviseWith));--webkit-backdrop-filter:blur(pxToRemMix(4));backdrop-filter:blur(calc(4 * 100vw / var(--wiepotrDeviseWith)));background:rgba(255,255,255,.7);padding:calc(72 * 100vw / var(--wiepotrDeviseWith)) calc(48 * 100vw / var(--wiepotrDeviseWith)) calc(72 * 100vw / var(--wiepotrDeviseWith)) calc(238 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__info-body{border-radius:calc(26 * 100vw / var(--wiepotrDeviseWith));padding:calc(48 * 100vw / var(--wiepotrDeviseWith)) calc(35 * 100vw / var(--wiepotrDeviseWith));background:#fff;display:flex;align-items:center;flex-direction:column;color:#163f26;gap:calc(10 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__title{font-weight:700;font-size:calc(52 * 100vw / var(--wiepotrDeviseWith));text-align:center}.modal-game__container .backpack-modal__desc{font-weight:400;font-size:calc(17 * 100vw / var(--wiepotrDeviseWith));text-align:center;width:calc(260 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__disclaimer-box{display:flex;align-items:center;flex-direction:column;position:relative;align-self:flex-end;margin-bottom:calc(8 * 100vw / var(--wiepotrDeviseWith));gap:calc(13 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__disclaimer-add{font-size:calc(17 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__disclaimer{width:calc(1310 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:1507/95}@media (max-width:48em){.modal-game__container .slide__btn-box--isChoices{display:flex;flex-direction:column;gap:calc(4 * 100vw / var(--wiepotrDeviseWith));width:calc(100% - 24 * 100vw / var(--wiepotrDeviseWith));top:calc(60 * 100vw / var(--wiepotrDeviseWith));padding:calc(3 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(12 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__disclaimer-add,.modal-game__container .slide__disclaimer-add{font-size:calc(7 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .slide__disclaimer{width:calc(325 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:325/50}.modal-game__container .achiev-counter{top:calc(12 * 100vw / var(--wiepotrDeviseWith));gap:calc(10 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .achiev-counter__img,.modal-game__container .achiev-overlay__img{width:calc(40 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .achiev-counter__count,.modal-game__container .achiev-overlay__body,.modal-game__container .ending-overlay__title{font-size:calc(14 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__bg img{width:100%;height:100%;-webkit-mask-image:unset;mask-image:unset}.modal-game__container .ending-overlay__content{gap:calc(12 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__achive{width:calc(164 * 100vw / var(--wiepotrDeviseWith));margin-left:unset;margin-top:calc(145 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__img{width:calc(174 * 100vw / var(--wiepotrDeviseWith));left:50%;transform:translateX(-50%);top:calc(-145 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__body{padding:calc(24 * 100vw / var(--wiepotrDeviseWith)) calc(6 * 100vw / var(--wiepotrDeviseWith)) calc(6 * 100vw / var(--wiepotrDeviseWith)) calc(6 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(5 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__body-inner{border-radius:calc(5 * 100vw / var(--wiepotrDeviseWith));padding:calc(12 * 100vw / var(--wiepotrDeviseWith)) calc(14 * 100vw / var(--wiepotrDeviseWith)) calc(10 * 100vw / var(--wiepotrDeviseWith));gap:calc(6 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__subtitle{font-size:calc(9 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__result{gap:calc(4 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__result-title{font-size:calc(9 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__counter{gap:calc(10 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__badge{padding:calc(2 * 100vw / var(--wiepotrDeviseWith)) calc(4 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(5 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__badge-img{width:calc(20 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__count{font-size:calc(10 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__btn-box{flex-direction:column;gap:calc(12 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__end{width:100%}.modal-game__container .ending-overlay__end-img{border-radius:calc(6 * 100vw / var(--wiepotrDeviseWith));width:calc(37 * 100vw / var(--wiepotrDeviseWith));height:calc(34 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay__end-text{border:calc(.25 * 100vw / var(--wiepotrDeviseWith)) solid #fff;border-radius:calc(6 * 100vw / var(--wiepotrDeviseWith));padding:calc(8 * 100vw / var(--wiepotrDeviseWith)) calc(15 * 100vw / var(--wiepotrDeviseWith)) calc(8 * 100vw / var(--wiepotrDeviseWith)) calc(50 * 100vw / var(--wiepotrDeviseWith));width:100%;font-size:calc(8 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .ending-overlay .btn--green{padding:calc(7 * 100vw / var(--wiepotrDeviseWith)) calc(50 * 100vw / var(--wiepotrDeviseWith));width:100%}.modal-game__container .backpack-badge{top:calc(12 * 100vw / var(--wiepotrDeviseWith));left:calc(12 * 100vw / var(--wiepotrDeviseWith));padding:calc(4 * 100vw / var(--wiepotrDeviseWith));gap:calc(4 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-badge::after,.modal-game__container .backpack-badge__img{width:calc(28 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal.isOpen .backpack-modal__body{scale:1}.modal-game__container .backpack-modal__body{gap:calc(8 * 100vw / var(--wiepotrDeviseWith));margin-top:calc(45 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__content{margin-left:unset}.modal-game__container .backpack-modal__img{margin-left:unset;top:calc(-132 * 100vw / var(--wiepotrDeviseWith));left:50%;transform:translateX(-50%);width:calc(350 * 100vw / var(--wiepotrDeviseWith));height:calc(194 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__info{background:rgba(255,255,255,.7);padding:calc(76 * 100vw / var(--wiepotrDeviseWith)) calc(12 * 100vw / var(--wiepotrDeviseWith)) calc(12 * 100vw / var(--wiepotrDeviseWith));border-radius:calc(5 * 100vw / var(--wiepotrDeviseWith));width:calc(216 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__info-body{border-radius:calc(5 * 100vw / var(--wiepotrDeviseWith));padding:calc(12 * 100vw / var(--wiepotrDeviseWith)) calc(10 * 100vw / var(--wiepotrDeviseWith));gap:calc(5 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__title{font-size:calc(18 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__desc{width:100%;font-size:calc(12 * 100vw / var(--wiepotrDeviseWith))}.modal-game__container .backpack-modal__disclaimer{width:calc(325 * 100vw / var(--wiepotrDeviseWith));aspect-ratio:325/50}}`;
   document.head.appendChild(style);
 }
 
